@@ -1,0 +1,35 @@
+{
+  "name": "nodestash",
+  "version": "0.0.1",
+  "description": "Parse logs using just NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniel-morrison/nodestash.git"
+  },
+  "keywords": [
+    "logs",
+    "analytics"
+  ],
+  "author": "Daniel Morrison <hi@danielmorrison.io>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daniel-morrison/nodestash/issues"
+  },
+  "homepage": "https://github.com/daniel-morrison/nodestash#readme",
+  "dependencies": {
+    "cidr-matcher": "^1.0.3",
+    "geoip-lite": "^1.1.8",
+    "referral-parser": "0.0.2",
+    "url": "^0.11.0",
+    "useragent": "^2.1.9"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.1.1",
+    "sinon": "^1.17.6"
+  }
+}

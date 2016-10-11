@@ -5,6 +5,7 @@
   "csv": {
     "active": true,
     "cellSeparator": "\t",
+    "skipHeaderRow": true,
     "data": [
       {
         "type": "string",

@@ -5,9 +5,11 @@ const mocha 			= require('mocha');
 const chai 				= require('chai');
 const Nodestash 		= require('../index.js');
 const expect 			= chai.expect;
-const template 			= require('./template.json');
 
-describe("Steam log data to parser", function() {
+delete require.cache[require.resolve('../lib/template.json')];
+const template 			= require('../lib/template.json');
+
+describe("Stream log data to parser", function() {
 	it('should get a new preference file', function() {
 		//act
 		let processlogs = new Nodestash.Preferences();
@@ -18,6 +20,7 @@ describe("Steam log data to parser", function() {
 	it('should process all log lines', function(done) {
 		//arrange
 		let processlogs = new Nodestash.Preferences();
+		processlogs.prefs.csv.skipHeaderRow = false;
 		let nodestash = new Nodestash.Init(processlogs);
 
 		let reader = fs.createReadStream(__dirname + '/test.log');

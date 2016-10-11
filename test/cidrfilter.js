@@ -4,7 +4,7 @@ const mocha 	= require('mocha');
 const chai 		= require('chai');
 const cidrfilter = require('../lib/filters/cidrfilter');
 const expect 	= chai.expect;
-let   template 	= require('./template.json');
+let template 			= require('../lib/template.json');
 
 const CIDRMatcher         = require('cidr-matcher');
 let   cidrMatch;

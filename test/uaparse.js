@@ -4,7 +4,7 @@ const mocha 	= require('mocha');
 const chai 		= require('chai');
 const uaparse 	= require('../lib/filters/uaparse');
 const expect 	= chai.expect;
-let   template 	= require('./template.json');
+let template 			= require('../lib/template.json');
 
 const sampleObj = function() {
 	return { 	ns_vid: 'ff7735a3e6b09dcb1bf3c46a27b2da9f',

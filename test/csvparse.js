@@ -1,10 +1,13 @@
 'use strict';
 
+const fs 		= require('fs');
+const Nodestash = require('../index.js');
+
 const mocha 	= require('mocha');
 const chai 		= require('chai');
 const csvparse 	= require('../lib/filters/csvparse');
 const expect 	= chai.expect;
-let   template 	= require('./template.json');
+let template 	= require('../lib/template.json');
 
 describe("Parse CSV", function() {
 	it('should split each line by comma', function() {
@@ -59,5 +62,27 @@ describe("Parse CSV", function() {
 			//act
 			csvparse({}, template.csv);
 		}).to.throw();;
+	});
+
+	it('should ignore first row if skipHeaderRow is true', function(done) {
+		//arrange
+		//arrange
+		let processlogs = new Nodestash.Preferences();
+		let nodestash = new Nodestash.Init(processlogs);
+
+		let reader = fs.createReadStream(__dirname + '/test.log');
+		let writer = fs.createWriteStream(__dirname + '/result.log');
+		let parsed = 0;
+
+		nodestash.on('parsed', function() {
+			parsed++;
+		});
+
+		//act
+		reader.pipe(nodestash).pipe(writer);
+		writer.on('close', function() {
+			expect(parsed).to.eql(999);
+			done();
+		});	
 	});
 });

@@ -8,22 +8,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/daniel-morrison/nodestash.git"
+    "url": "git+https://github.com/danm/nodestash.git"
   },
   "keywords": [
     "logs",
     "analytics"
   ],
-  "author": "Daniel Morrison <hi@danielmorrison.io>",
+  "author": "Daniel Morrison <daniel.morrison@mac.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/daniel-morrison/nodestash/issues"
+    "url": "https://github.com/danm/nodestash/issues"
   },
-  "homepage": "https://github.com/daniel-morrison/nodestash#readme",
+  "homepage": "https://github.com/danm/nodestash#readme",
   "dependencies": {
     "cidr-matcher": "^1.0.3",
     "geoip-lite": "^1.1.8",
-    "referral-parser": "daniel-morrison/referral-parser#internal",
+    "referral-parser": "danm/referral-parser#internal",
     "string-hash": "^1.1.0",
     "url": "^0.11.0",
     "useragent": "^2.1.9"

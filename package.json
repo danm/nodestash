@@ -4,7 +4,7 @@
   "description": "Parse logs using just NodeJS",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha node_modules/referral-parser/test test"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,8 @@
   "dependencies": {
     "cidr-matcher": "^1.0.3",
     "geoip-lite": "^1.1.8",
-    "referral-parser": "0.0.2",
+    "referral-parser": "danm/referral-parser#internal",
+    "string-hash": "^1.1.0",
     "url": "^0.11.0",
     "useragent": "^2.1.9"
   },

@@ -4,20 +4,36 @@
 Heavily influenced by [Elastic's Logstash](https://github.com/elastic/logstash), is Nodestash. A log processor to parse, filter and enrich logs in [Node](http://nodejs.org) using streams.
 
 ```js
-const fs = require('fs');
-const Nodestash	= require('nodestash');
-const ns = new Nodestash.Init();
+const zlib = require('zlib');
+const consumer = require('sqs-consumer');
+const Nodestash = require('nodestash');
+const AWS = require('aws-sdk');
 
-let reader = fs.createReadStream('./beacon_20160901_130000.log');
-let writer = fs.createWriteStream('./output.log');
+consumer.create({
+    queueUrl: 'sqs-url',
+    handleMessage: (message, done) => {
+        const json = JSON.parse(message.Body);
 
-reader.pipe(ns).pipe(writer);
+            let download = () => new AWS.S3().getObject({ Bucket: bucket, Key: key }).createReadStream();
+            let gunzip = zlib.createGunzip();
+            let zipper = zlib.createGzip();
+            let nodestash = new Nodestash.Init();
 
-ns.on('parse', function(data) {
-  console.log('line parsed', data);
-});
+            let stream = download()
+                .pipe(gunzip)
+                .pipe(nodestash)
+                .pipe(zipper);
 
+            let writeParams = { Bucket: writeBucket, Key: writeKey, Body: stream };
+            var s3Up = new AWS.S3().upload(writeParams, (err, res) => {
+                done();
+            });
 
+        } else {
+            done(throw new Error(message));
+        }
+    }
+}).start();
 ```
 
 ## Installation

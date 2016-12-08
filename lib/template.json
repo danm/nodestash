@@ -161,8 +161,5 @@
   	"refin": "referrer",
   	"agentin": "agent",
   	"out":"rp"
-  },
-  "bbc": {
-  	"active": true
   }
 }

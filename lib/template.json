@@ -158,6 +158,7 @@
     "referrer": {
         "active": true,
         "refin": "referrer",
+        "appin": "app_type",
         "agentin": "agent",
         "out": "rp"
     },

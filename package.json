@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "update": "./update",
+    "update": "./update.sh",
     "bump": "npm version patch -m 'version bump' && git push && npm publish"
   },
   "repository": {

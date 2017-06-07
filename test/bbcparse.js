@@ -10,6 +10,7 @@ const sampleObj = function() {
     return {
         ns_vid: 'ff7735a3e6b09dcb1bf3c46a27b2da9f',
         ns_utc: 1473856240054,
+        date: new Date(1473856240054),
         name: 'news.business.story.37618618.page',
         ns_jspageurl: 'news',
         app_type: 'mobile-app',
@@ -24,10 +25,11 @@ const sampleObj = function() {
     };
 }
 
-describe("Parse BBC Data", function() {
+describe("bbcparse", function() {
     it('should throw error if no parameters passed', function() {
         //arrange
         let line = new sampleObj();
+
         //assert
         expect(function() {
             //act

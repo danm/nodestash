@@ -44,13 +44,4 @@ describe("Parse Date", function() {
 			dateparse(line, template.date);
 		}).to.throw();
 	});
-
-	it('should group a time into a 15 minute period', function() {
-		//arrange
-		let line = new sampleObj();
-		//act
-		let result = dateparse(line, template.date);
-		//assert
-		expect(result.date).to.equal('2016-09-14T12:30:00.000Z');
-	});
 });

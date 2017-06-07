@@ -33,6 +33,7 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.4.2",
-    "sinon": "^1.17.7"
+    "sinon": "^1.17.7",
+    "yamlparser": "0.0.2"
   }
 }

@@ -23,7 +23,8 @@ const sampleObj = function() {
 					};
 }
 
-describe("Parse User Agent", function() {
+describe("uaparse. Parse User Agent", function() {
+
 	it('should throw error if no parameters passed', function() {
 		//arrange
 		let line = new sampleObj();

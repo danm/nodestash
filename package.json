@@ -1,6 +1,6 @@
 {
   "name": "nodestash",
-  "version": "0.0.66",
+  "version": "0.0.67",
   "description": "Parse logs using just NodeJS",
   "main": "index.js",
   "scripts": {

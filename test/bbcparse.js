@@ -2,6 +2,7 @@
 
 const mocha = require('mocha');
 const chai = require('chai');
+const referralparse = require('../lib/filters/referralparse');
 const bbcparse = require('../lib/filters/bbcparse');
 const expect = chai.expect;
 let template = require('../lib/template.json');
@@ -18,6 +19,8 @@ const sampleObj = function() {
         bbc_site: 'invalid-data',
         action_name: 'swipe',
         type: 'hidden',
+        referrer: "http://bbc.co.uk/news",
+        for_nation: 'gb',
         ip: '81.149.230.113',
         screen_resolution: '1024x768',
         agent: 'BBCNews/3.9.3.14 CFNetwork/758.5.3 Darwin/15.6.0',
@@ -33,16 +36,27 @@ describe("bbcparse", function() {
         //assert
         expect(function() {
             //act
+
             bbcparse(line);
         }).to.throw();
+    });
+
+    it('should provide edition', function() {
+        //arrange
+        let line = new sampleObj();
+        let res = referralparse(line, template.referrer);
+        let result = bbcparse(res, template);
+        //assert
+        expect(result.edition).to.equal('domestic');
     });
 
     it('should return a CPS id from the countername', function() {
         //arrange
         let line = new sampleObj();
-        //act
+        // console.log(line, template);
+        
         let result = bbcparse(line, template);
-
+        
         //assert
         expect(result.cps_asset_id).to.equal('37618618');
     });

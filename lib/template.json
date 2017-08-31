@@ -109,6 +109,10 @@
             {
                 "type": "string",
                 "value": "extlink_url"
+            },
+            {
+                "type": "string",
+                "value": "bbc_hid"
             }
         ]
     },
@@ -147,6 +151,7 @@
     },
     "geoip": {
         "active": true,
+        "cache": true,
         "in": "ip",
         "out": "loc"
     },

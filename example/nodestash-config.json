@@ -1,120 +1,128 @@
 {
     "Nodestash": {
-        "lineSepatator": "\r\n"
+        "lineSepatator": "\n"
     },
     "csv": {
         "active": true,
         "cellSeparator": "\t",
         "skipHeaderRow": true,
         "data": [{
-                "type": "string",
-                "value": "ns_vid"
-            },
-            {
-                "type": "int",
-                "value": "ns_utc"
-            },
-            {
-                "type": "string",
-                "value": "cps_asset_id"
-            },
-            {
-                "type": "string",
-                "value": "name"
-            },
-            {
-                "type": "string",
-                "value": "section"
-            },
-            {
-                "type": "string",
-                "value": "ns_jspageurl"
-            },
-            {
-                "type": "string",
-                "value": "page_type"
-            },
-            {
-                "type": "string",
-                "value": "app_type"
-            },
-            {
-                "type": "string",
-                "value": "app_name"
-            },
-            {
-                "type": "string",
-                "value": "bbc_site"
-            },
-            {
-                "type": "string",
-                "value": "referrer"
-            },
-            {
-                "type": "string",
-                "value": "referring_object"
-            },
-            {
-                "type": "string",
-                "value": "action_name"
-            },
-            {
-                "type": "string",
-                "value": "action_type"
-            },
-            {
-                "type": "string",
-                "value": "type"
-            },
-            {
-                "type": "string",
-                "value": "ip"
-            },
-            {
-                "type": "string",
-                "value": "screen_resolution"
-            },
-            {
-                "type": "string",
-                "value": "agent"
-            },
-            {
-                "type": "string",
-                "value": "ns_v_platform"
-            },
-            {
-                "type": "string",
-                "value": "ns_st_id"
-            },
-            {
-                "type": "string",
-                "value": "ns_st_ci"
-            },
-            {
-                "type": "int",
-                "value": "ns_st_cl"
-            },
-            {
-                "type": "string",
-                "value": "ns_st_ev"
-            },
-            {
-                "type": "int",
-                "value": "ns_st_po"
-            },
-            {
-                "type": "int",
-                "value": "ns_st_pt"
-            },
-            {
-                "type": "string",
-                "value": "ns_st_ty"
-            },
-            {
-                "type": "string",
-                "value": "extlink_url"
-            }
-        ]
+            "type": "string",
+            "value": "ns_vid"
+        },
+        {
+            "type": "int",
+            "value": "ns_utc"
+        },
+        {
+            "type": "string",
+            "value": "cps_asset_id"
+        },
+        {
+            "type": "string",
+            "value": "name"
+        },
+        {
+            "type": "string",
+            "value": "section"
+        },
+        {
+            "type": "string",
+            "value": "ns_jspageurl"
+        },
+        {
+            "type": "string",
+            "value": "page_type"
+        },
+        {
+            "type": "string",
+            "value": "app_type"
+        },
+        {
+            "type": "string",
+            "value": "app_name"
+        },
+        {
+            "type": "string",
+            "value": "bbc_site"
+        },
+        {
+            "type": "string",
+            "value": "referrer"
+        },
+        {
+            "type": "string",
+            "value": "referring_object"
+        },
+        {
+            "type": "string",
+            "value": "action_name"
+        },
+        {
+            "type": "string",
+            "value": "action_type"
+        },
+        {
+            "type": "string",
+            "value": "type"
+        },
+        {
+            "type": "string",
+            "value": "ip"
+        },
+        {
+            "type": "string",
+            "value": "screen_resolution"
+        },
+        {
+            "type": "string",
+            "value": "agent"
+        },
+        {
+            "type": "string",
+            "value": "ns_v_platform"
+        },
+        {
+            "type": "string",
+            "value": "ns_st_id"
+        },
+        {
+            "type": "string",
+            "value": "ns_st_ci"
+        },
+        {
+            "type": "int",
+            "value": "ns_st_cl"
+        },
+        {
+            "type": "string",
+            "value": "ns_st_ev"
+        },
+        {
+            "type": "int",
+            "value": "ns_st_po"
+        },
+        {
+            "type": "int",
+            "value": "ns_st_pt"
+        },
+        {
+            "type": "string",
+            "value": "ns_st_ty"
+        },
+        {
+            "type": "string",
+            "value": "extlink_url"
+        },
+        {
+            "type": "string",
+            "value": "for_nation"
+        },
+        {
+            "type": "string",
+            "value": "bbc_hid"
+        }
+    ]
     },
     "json": {
         "active": false
@@ -153,7 +161,8 @@
         "active": true,
         "bbc": true,
         "in": "ip",
-        "out": "loc"
+        "out": "loc",
+        "cache": true
     },
     "useragent": {
         "active": true,

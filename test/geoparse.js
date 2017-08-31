@@ -31,7 +31,7 @@ describe("Parse GEOIP", function() {
 		expect(function() {
 			//act
 			geoipparse(line, null);
-		}).to.throw();;
+		}).to.throw();
 	});
 
 	it('should return an object about the geo location', function() {
@@ -41,5 +41,5 @@ describe("Parse GEOIP", function() {
 		let result = geoipparse(line, template.geoip);
 		//assert
 		expect(result.loc).to.include.all.keys('range', 'country', 'region', 'city', 'll', 'metro', 'cont');
-	})
+	});
 });

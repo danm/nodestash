@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/danm/nodestash#readme",
   "dependencies": {
-    "@bbc/abacus-framework": "^2.1.3",
+    "@bbc/abacus-framework": "^2.1.6",
     "cidr-matcher": "^1.0.5",
     "convert-iso8601-duration": "^1.0.1",
     "geoip-lite": "^1.2.1",
@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^3.5.0",
+    "mocha": "^3.5.1",
     "sinon": "^1.17.7",
     "yamlparser": "0.0.2"
   }

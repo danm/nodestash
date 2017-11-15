@@ -23,7 +23,6 @@
   },
   "homepage": "https://github.com/danm/nodestash#readme",
   "dependencies": {
-    "@bbc/abacus-framework": "^2.1.6",
     "cidr-matcher": "^1.0.5",
     "convert-iso8601-duration": "^1.0.1",
     "geoip-lite": "^1.2.1",
